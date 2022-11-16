@@ -1,4 +1,4 @@
 import logRegres
 
 dataarr, labelmat = logRegres.loadDataSet()
-logRegres.gradAscent(dataarr, labelmat)
+print logRegres.gradAscent(dataarr, labelmat)
