@@ -101,8 +101,7 @@ def colicTest():
     frTrain = open('horseColicTraining.txt');
     frTest = open('horseColicTest.txt')
 
-
-    trainingSet = [];
+    trainingSet = []
     trainingLabels = []
     for line in frTrain.readlines():
         currLine = line.strip().split('\t')
@@ -128,15 +127,8 @@ def colicTest():
 
 
 def multiTest():
-    numTests = 10;
+    numTests = 10
     errorSum = 0.0
     for k in range(numTests):
         errorSum += colicTest()
     print "after %d iterations the average error rate is: %f" % (numTests, errorSum / float(numTests))
-
-
-# while True:
-#     try:
-#         data = list(map(int, input().strip().split()))
-#     except EOFError:
-#         break
